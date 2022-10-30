@@ -7,10 +7,6 @@
     padding-left: 16px;
     outline: transparent;
 }
-  
-.modal-input:focus {
-  border: 1px solid var(--top-adress-color);
-}
 
 .sign-btn {
   display: flex;
@@ -18,10 +14,7 @@
   justify-content: center;
   font-family: inherit;
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+  @include font(700, 16px, 1.88, 0.06em);
   color: var(--top-btn-color);
   background-color: var(--top-adress-color);
   cursor: pointer;
@@ -29,12 +22,11 @@
   border-radius: 4px;
   border-color: var(--top-adress-color);
   padding: 10px 52px;
-}
-
-.sign-btn:hover,
-.sign-btn:focus {
+  &:hover,
+  &:focus {
   color: var(--top-btn-color);
   background-color: #188ce8;
+}
 }
 
 .sign-icon {
@@ -84,18 +76,14 @@
 
 .modal-close-icon {
   fill: #000000;
-}
-
-.modal-close-icon:hover {
-  fill: #2196F3;
+  &:hover {
+    fill: #2196F3;
+  }
 }
 
 .modal-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 20px, 1.15, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 12px;
 }
@@ -109,10 +97,7 @@
 }
 
 .modal-label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+  @include font(400, 12px, 1.16, 0.01em);
   color: var(--top-text-color);
   margin-bottom: 4px;
   display: block;
@@ -126,14 +111,14 @@
   border-radius: 4px;
   padding-left: 42px;
   outline: transparent;
-}
-
-.modal-input:focus {
+  &:focus {
+    border: 1px solid var(--top-adress-color);
+  }
+  &:hover,
+  &:focus {
   border: 1px solid var(--top-adress-color);
+  border-radius: 4px;
 }
-
-.modal-input:focus + .modal-input-icon {
-  fill: var(--top-adress-color);
 }
 
 .modal-input-icon {
@@ -141,12 +126,9 @@
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
-}
-
-.modal-input:hover,
-.modal-input:focus {
-  border: 1px solid var(--top-adress-color);
-  border-radius: 4px;
+  .modal-input:focus + & {
+    fill: var(--top-adress-color);
+  }
 }
 
 .modal-comment {
@@ -154,57 +136,46 @@
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+  @include font(400, 12px, 1.16, 0.01em);
   color: rgba(117, 117, 117, 0.5);
   padding: 12px 16px;
   resize: none;
   outline: transparent;
-}
-
-.modal-comment:focus {
-  border: 1px solid var(--top-adress-color);
-}
-
-.modal-comment:hover,
-.modal-comment:focus {
+  &:focus {
+    border: 1px solid var(--top-adress-color);
+  }
+  &:hover,
+  &:focus {
   border: 1px solid var(--top-adress-color);
   border-radius: 4px;
 }
+}
 
 .check-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(400, 14px, 1.71, 0.03em);
   color: var(--top-text-color);
   display: flex;
   align-items: center;
   padding-left: 14px;
-}
-
-.check-text span {
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--top-title-color);
-  border-radius: 2px;
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-}
-
-.input-check:checked + .check-text span {
-  background-color: var(--top-adress-color);
-  border-color: transparent;
-  fill: #ffffff;
-}
-
-.input-check:focus + .check-text span {
-  border-color: var(--top-adress-color);
+   span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--top-title-color);
+    border-radius: 2px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    .input-check:checked + & {
+      background-color: var(--top-adress-color);
+      border-color: transparent;
+      fill: #ffffff;
+    }
+   .input-check:focus + & {
+      border-color: var(--top-adress-color);
+    }
+  }
 }
 
 .check-color-text {
@@ -215,10 +186,7 @@
 .submit-btn {
   font-family: inherit;
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+  @include font(700, 16px, 1.88, 0.06em);
   color: var(--top-btn-color);
   background-color: var(--top-adress-color);
   cursor: pointer;
@@ -229,10 +197,11 @@
   border-radius: 4px;
   border-color: var(--top-adress-color);
   padding: 10px 52px;
-}
-
-.submit-btn:hover,
-.submit-btn:focus {
+  &:hover,
+  &:focus {
   color: var(--top-btn-color);
   background-color: #188ce8;
 }
+}
+
+

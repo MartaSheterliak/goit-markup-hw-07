@@ -1,25 +1,27 @@
 .activity {
     padding-bottom: 94px;
   }
+
+  .activity__container {
+    display: flex;
+    align-items: center;
+  }
   
-  .activity-list {
+  .activity__list {
     display: flex;
     gap: 30px;
   }
   
-  .activity-item {
+  .activity__item {
     width: calc((100%-60) / 3);
     position: relative;
   }
   
-  .activity-top-title {
+  .activity__top-title {
     position: absolute;
     bottom: 0;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.16;
+    @include font(700, 14px, 1.16, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: rgba(47, 48, 58, 0.8);
@@ -29,12 +31,9 @@
     width: 100%;
   }
   
-  .activity-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+  .activity__title {
+    @include font(700, 36px, 1.16, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--top-title-color);
     margin-bottom: 50px;
   }
