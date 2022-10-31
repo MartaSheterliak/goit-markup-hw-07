@@ -6,6 +6,13 @@
     display: flex;
     align-items: center;
   }
+
+  .activity__title {
+    @include font(700, 36px, 1.16, 0.03em);
+    text-align: center;
+    color: var(--top-title-color);
+    margin-bottom: 50px;
+  }
   
   .activity__list {
     display: flex;
@@ -13,7 +20,7 @@
   }
   
   .activity__item {
-    width: calc((100%-60) / 3);
+    width: calc((100% - 60px) / 3);
     position: relative;
   }
   
@@ -31,9 +38,3 @@
     width: 100%;
   }
   
-  .activity__title {
-    @include font(700, 36px, 1.16, 0.03em);
-    text-align: center;
-    color: var(--top-title-color);
-    margin-bottom: 50px;
-  }

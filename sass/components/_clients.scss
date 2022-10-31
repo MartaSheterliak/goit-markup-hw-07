@@ -4,13 +4,19 @@
     text-align: center;
     color: var(--top-title-color);
   }
+
+  .clients__container {
+    display: flex;
+    align-items: center;
+  }
   
   .clients-list {
     display: flex;
+    gap: 30px;
   }
   
-  .clients-item {
-    width: calc((100%-150) / 6);
+  .clients__item {
+    width: calc((100% - 150px) / 6);
   }
   
   .clients-link {
