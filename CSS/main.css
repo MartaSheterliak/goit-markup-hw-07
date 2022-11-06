@@ -188,6 +188,7 @@ body {
   color: #ffffff;
   max-width: 696px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .hero__btn {
@@ -259,9 +260,6 @@ body {
 
 .activity {
   padding-bottom: 94px;
-}
-
-.activity__activity--position {
   display: flex;
   align-items: center;
 }
@@ -276,17 +274,17 @@ body {
   margin-bottom: 50px;
 }
 
-.activity__list {
+.services-list {
   display: flex;
   gap: 30px;
 }
 
-.activity__item {
+.services-list__item {
   width: calc((100% - 60px) / 3);
   position: relative;
 }
 
-.activity__top-title {
+.services-list__title {
   position: absolute;
   bottom: 0;
   font-weight: 700;
@@ -439,6 +437,7 @@ body {
 .footer-container {
   display: flex;
   align-items: baseline;
+  max-width: 1600px;
 }
 
 .footer-list {
