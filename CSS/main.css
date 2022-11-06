@@ -164,7 +164,7 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero__container {
+.hero {
   background-color: #2f303a;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -172,6 +172,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 1600px;
+}
+
+.hero__container {
   max-width: 1600px;
 }
 
@@ -257,7 +261,7 @@ body {
   padding-bottom: 94px;
 }
 
-.activity__container {
+.activity__activity--position {
   display: flex;
   align-items: center;
 }
@@ -389,7 +393,7 @@ body {
   color: var(--top-title-color);
 }
 
-.clients__container {
+.clients__clients--position {
   display: flex;
   align-items: center;
 }
@@ -429,6 +433,7 @@ body {
   padding-bottom: 60px;
   display: flex;
   gap: 70px;
+  position: absolute;
 }
 
 .footer-container {
@@ -787,6 +792,7 @@ body {
 }
 
 .progects-list {
+  display: block;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -794,10 +800,9 @@ body {
 
 .progects-list-item {
   width: calc((100% - 60px) / 3);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .progects-list-item:hover, .progects-list-item:focus {
-  border: 1px solid #EEEEEE;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
